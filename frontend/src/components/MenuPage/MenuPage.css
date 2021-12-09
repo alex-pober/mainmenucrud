@@ -1,0 +1,94 @@
+* {
+    background-color: #ffffff00;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+a{
+    text-decoration: none;
+    border: none;
+}
+
+.item-div >span > button {
+    border: none;
+    display: inline-block;
+
+}
+
+.twoButtonsED{
+    margin-left: auto;
+}
+
+.addItem{
+    align-items: center;
+    display: flex;
+    border: none;
+    color: inherit;
+    padding: 10px 20px;
+    border-radius: 18px;
+    background-color: orange;
+    text-decoration: none !important;
+}
+
+#editIcon{
+    justify-content: right;
+    align-items: right;
+    border: none;
+    color: #32CD32;
+    width: 40px;
+    border: 3px solid #32CD32;
+    border-radius: 20px;
+    padding: 2px 15px;
+    line-height: 1.47059;
+
+}
+
+#editTrash{
+    border: none;
+    color: #D11A2A;
+    border: 3px solid #D11A2A;
+    /* margin-left: auto; */
+    width: 80px;
+    border-radius: 20px;
+    padding: 2px 15px;
+    line-height: 1.47059;
+
+}
+
+.item-div{
+    border-bottom: 2px solid #e9e9e9;
+    /* border: 1px solid rgb(204, 204, 204); */
+    padding: 10px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin: 5px; */
+}
+
+
+.item-title{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.item-description{
+    padding-top: 10px;
+    font-size: 24px;
+    color: #86868b;
+}
+
+.item-price{
+    margin-top: 10px;
+    /* display: flex; */
+    justify-content: center;
+    font-size: 17px;
+    color: white;
+    width: 50px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    border-radius: 20px;
+    background: #3164B2;
+    padding: 2px 15px;
+}

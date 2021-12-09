@@ -1,0 +1,26 @@
+.logo{
+    width: 40%;
+}
+
+.menu{
+    border:1px solid orange;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background: orange;
+
+}
+
+.profileButton{
+    border: none;
+    width: 25px;
+
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}

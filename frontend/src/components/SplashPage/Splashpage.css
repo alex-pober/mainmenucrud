@@ -1,0 +1,47 @@
+h2 {
+    font-size: 16px;
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 1px 1px #0000001a;
+}
+
+a{
+    background-color:#ffffff00;
+    border: none;
+}
+
+.twoButtons {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twoButtons > button {
+    border: none;
+    color: white;
+    /* background: white; */
+    background-color: #ff9100;
+    border-radius: 35px;
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.twoButtons > button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.splashImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}

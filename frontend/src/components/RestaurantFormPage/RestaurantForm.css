@@ -1,0 +1,42 @@
+* {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    background: rgb(241,242,242);
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+
+form {
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 25px;
+    padding: 10px;
+    background: white;
+    background-color: white ;
+  }
+
+input {
+    border: 2px solid #ffffff;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+    height: 100%;
+    padding: 10px 15px;
+    width: 50pv;
+    float: inline-end;
+}
+
+/* button {
+    border: 1px;
+    color: white;
+    background: white;
+    background-color: #ff9100;
+    border-radius: 35px;
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+  } */
