@@ -8,6 +8,29 @@ const EDIT_SINGLE_ITEM = 'restaurant/editSingleItem'
 const DELETE_ITEM = 'restaurant/deleteItem'
 const LOAD_RESTAURANT = 'restaurant/loadRestaurant'
 
+const ADD_MENU = 'restaurant/addMenu';
+
+const addMenu = (item) => {
+    return {
+       type: ADD_MENU,
+    //    menu
+    }
+   }
+
+export const createMenu = (newMenu) => async dispatch => {
+    const response = await csrfFetch('/api/menu', {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify(newMenu)
+    })
+if (response.ok) {
+        const newMenu = await response.json();
+        dispatch(addMenu(newMenu));
+        return newMenu;
+    }
+}
+
+
 const addRestaurant = items => {
  return {
     type: ADD_RESTAURANT,
@@ -138,6 +161,18 @@ const initialState = {}
 const itemsReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
+
+    //   case ADD_MENU: {
+    //     newState = Object.assign({}, state);
+    //     newState.currentItems = action.item;
+    //     return newState;
+    //   }
+
+      case ADD_MENU: {
+        const newState = { ...state }
+        console.log(newState)
+        return newState
+      }
 
       case ADD_RESTAURANT: {
         newState = Object.assign({}, state);

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory, useParams } from "react-router-dom";
 // import * as sessionActions from "../../store/session";
 import { getItems, deleteOneItem } from "../../store/restaurant"
-import { createMenu } from "../../store/menu";
+import { createMenu } from "../../store/restaurant";
 import './MenuPage.css';
 
 function MenuPage() {
@@ -28,7 +28,10 @@ const handleDelete = (id) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newMenu = {restaurantId: sessionUser.id}
+    const newMenu = {
+        restaurantId: sessionUser.id
+    }
+
     let submittedRest = dispatch(createMenu(newMenu))
         console.log("created listing:", submittedRest)
         if (submittedRest) {
@@ -59,10 +62,10 @@ const handleDelete = (id) => {
 
         })}
         <button className="addItem"><NavLink to="/newItem">Add Item</NavLink></button>
-        <div onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <h3>Add new menu</h3>
             <button type="submit">New Menu</button>
-        </ div>
+        </ form>
         <br />
     </div>
         )
