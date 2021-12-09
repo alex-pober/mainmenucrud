@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
-// import * as sessionActions from "../../store/session";
-import { createRestaurant } from "../../store/restaurant";
+import * as sessionActions from "../../store/session";
+import { createRestaurant, createMenu } from "../../store/restaurant";
 import './RestaurantForm.css';
 
 function RestaurantFormPage() {
@@ -16,47 +16,37 @@ function RestaurantFormPage() {
   const [zipcode, setZipcode] = useState("");
   const [phoneNumber, setPhonenumber] = useState("");
   const history = useHistory();
-//   const [errors, setErrors] = useState([]);
 
   if (!sessionUser) return <Redirect to="/" />;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const newRestaurant = {
-        userId: sessionUser.id,
-        name,
-        address,
-        city,
-        state,
-        country,
-        zipcode,
-        phoneNumber
+      userId: sessionUser.id,
+      name,
+      address,
+      city,
+      state,
+      country,
+      zipcode,
+      phoneNumber
     }
 
-    // dispatch(createRestaurant(newRestaurant))
+    const newMenu = {
+      restaurantId: sessionUser.id,
+  }
 
-    let submittedRest = dispatch(createRestaurant(newRestaurant))
-        console.log("created listing:", submittedRest)
-        if (submittedRest) {
-            history.push(`/menu/${sessionUser.id}`)
-        }
+    let submittedRest = await dispatch(createRestaurant(newRestaurant))
+    if (submittedRest) {
+      history.push(`/menu/${sessionUser.id}`)
+    }
 
-    // if (password === confirmPassword) {
-    //   setErrors([]);
-    //   return dispatch(sessionActions.signup({ email, username, password }))
-    //     .catch(async (res) => {
-    //       const data = await res.json();
-    //       if (data && data.errors) setErrors(data.errors);
-    //     });
-    // }
-    // return setErrors(['Confirm Password field must be the same as the Password field']);
+    dispatch(createMenu(newMenu))
   };
 
   return (
     <form className="editItemForm" onSubmit={handleSubmit}>
-      <ul>
-        {/* {errors.map((error, idx) => <li key={idx}>{error}</li>)} */}
-      </ul>
       <label>
         Restaurant Name
         <input
@@ -64,6 +54,7 @@ function RestaurantFormPage() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+
         />
       </label>
       <label>
@@ -73,6 +64,7 @@ function RestaurantFormPage() {
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           required
+
         />
       </label>
       <label>
@@ -99,6 +91,7 @@ function RestaurantFormPage() {
           type="text"
           value={country}
           onChange={(e) => setCountry(e.target.value)}
+          required
         />
       </label>
       <label>

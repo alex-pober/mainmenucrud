@@ -17,7 +17,10 @@
 .profileButton{
     border: none;
     width: 25px;
+}
 
+.profile-dropdown > ul{
+    border:brown 2px;
 }
 
 ul {

@@ -10,7 +10,7 @@ const { itemImage } = require('../../db/models');
 
 const router = express.Router();
 
-router.post('/',restoreUser, asyncHandler(async (req, res) => {
+router.post('/', restoreUser, asyncHandler(async (req, res) => {
     const {
         restaurantId,
             } = req.body;

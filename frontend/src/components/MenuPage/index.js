@@ -26,18 +26,17 @@ const handleDelete = (id) => {
 //   if (!sessionUser) return <Redirect to="/" />;
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newMenu = {
-        restaurantId: sessionUser.id
-    }
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     const newMenu = {
+//         restaurantId: sessionUser.id
+//     }
 
-    let submittedRest = dispatch(createMenu(newMenu))
-        console.log("created listing:", submittedRest)
-        if (submittedRest) {
-            history.push(`/menu/${sessionUser.id}`)
-        }
-  };
+//     let submittedRest = dispatch(createMenu(newMenu))
+//         if (submittedRest) {
+//             history.push(`/menu/${sessionUser.id}`)
+//         }
+//   };
 
 
 
@@ -62,10 +61,10 @@ const handleDelete = (id) => {
 
         })}
         <button className="addItem"><NavLink to="/newItem">Add Item</NavLink></button>
-        <form onSubmit={handleSubmit}>
+        {/* <form onSubmit={handleSubmit}>
             <h3>Add new menu</h3>
             <button type="submit">New Menu</button>
-        </ form>
+        </ form> */}
         <br />
     </div>
         )
