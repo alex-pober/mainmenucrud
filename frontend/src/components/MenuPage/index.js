@@ -31,7 +31,7 @@ const handleDelete = (id) => {
             return <div className='item-div' >
                         <div className='item-title'>{items.title}</div>
                         <div className='item-description'>{items.description}</div>
-                        <div className='item-price'>${items.price}</div>
+                        <div className='item-price'>{items.price}</div>
                         <span className="twoButtonsED">
                             {userismenu ? <button><a className="fas fa-pen fa-1x" id="editIcon" href={`/editItem/${items.id}`}></a></button> : null}
                             {userismenu ? <button className="fas fa-trash fa-1x" id="editTrash" onClick={() => handleDelete(items.id)}></button> : null}
