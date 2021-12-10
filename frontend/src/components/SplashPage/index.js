@@ -1,4 +1,5 @@
 import React from 'react';
+import Demo from '../DemoUser'
 
 import './Splashpage.css';
 
@@ -10,7 +11,7 @@ function SplashPage(){
                 <img src='https://mainmenu.io/wp-content/uploads/2021/02/MainMenu-Digital-Menu-Contactless.png'></img>
             </div>
                 <div className='twoButtons'>
-                    <button><a href="">DEMO</a></button>
+                    <Demo />
                 </div>
         </div>
     )

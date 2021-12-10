@@ -11,7 +11,7 @@ function MenuPage() {
   const items = useSelector(state =>state.items.currentItems)
   const history = useHistory();
   const { menuId } = useParams();
-  const userismenu = (sessionUser.id == menuId)
+  const userismenu = ((sessionUser?.id == menuId))
 
 
 const itemsArray = Object.assign([], items)
