@@ -39,7 +39,7 @@ const handleDelete = (id) => {
                         <br />
                     </div>
         })}
-        <button className="addItem"><NavLink to="/newItem">Add Item</NavLink></button>
+        {userismenu ? <button className="addItem"><NavLink to="/newItem">Add Item</NavLink></button> : null}
         <br />
     </div>
         )
