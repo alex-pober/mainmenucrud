@@ -19,10 +19,9 @@ a{
 }
 
 .addItem{
-    align-items: center;
-    display: flex;
+    justify-content: center;
     border: none;
-    color: inherit;
+    color: white;
     padding: 10px 20px;
     border-radius: 18px;
     background-color: orange;

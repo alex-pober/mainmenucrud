@@ -10,12 +10,9 @@ function SplashPage(){
                 <img src='https://mainmenu.io/wp-content/uploads/2021/02/MainMenu-Digital-Menu-Contactless.png'></img>
             </div>
                 <div className='twoButtons'>
-                    <button><a href="/signup">Signup</a></button>
+                    <button><a href="">DEMO</a></button>
                 </div>
-                <div className='twoButtons'>
-                    <button><a href="/login">Login</a></button>
-                </div>
-            </div>
+        </div>
     )
 }
 
