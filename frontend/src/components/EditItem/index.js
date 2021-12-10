@@ -94,7 +94,7 @@ function EditItem() {
         <label>
           Price
           <input
-            type="decimal"
+            type="text"
             value={price}
             onChange={updatePrice}
           />

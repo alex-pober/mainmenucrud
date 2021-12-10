@@ -54,6 +54,7 @@ function CreateItem() {
     <label>
       Category
       <input
+        placeholder="Appetizers"
         type="text"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
@@ -63,6 +64,7 @@ function CreateItem() {
     <label>
       Title
       <input
+        placeholder="Shrimp Cocktail"
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -72,6 +74,7 @@ function CreateItem() {
     <label>
       Description
       <input
+        placeholder="Cooked prawns in a Marie Rose sauce or cocktail sauce, served in a glass."
         type="text"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -81,7 +84,8 @@ function CreateItem() {
     <label>
       Price
       <input
-        type="decimal"
+        placeholder="$12.99, $, $$, $$$, Market Price, etc."
+        type="text"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
         required
