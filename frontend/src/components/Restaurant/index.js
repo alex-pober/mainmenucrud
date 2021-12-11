@@ -11,6 +11,8 @@ function Restaurant() {
   const sessionUser = useSelector(state => state?.session?.user);
   const items = useSelector(state =>state.items.undefined)
   const history = useHistory();
+  let re = /\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})/g;
+  let subst = '$1 $2-$3';
   console.log(id)
 //   const [errors, setErrors] = useState([]);
 
@@ -23,23 +25,21 @@ useEffect(() => {
 //   if (!sessionUser) return <Redirect to="/" />;
 
   return (
-    <div>
-        <h3>Restaurant Info</h3>
+    <div className='res-all'>
         <br />
         {itemsArray.map(items => {
-            return <div className='res-all' >
+            return <div>
+                      <div className="qrcode">
                         <div className='res-name'>{items.name}</div>
-
+                        <div className='res-name'> Digital Menu</div>
+                        <img src={`https://api.qrserver.com/v1/create-qr-code/?data=https://mainmenucrud.herokuapp.com/menu/${id}&amp;size=100x100`} alt="" title="" />
+                        <div className='res-name'> Scan QR Code</div>
+                      </div>
+                        <h3>Located At</h3>
                         <div className='res-address'>{items.address},</div>
-
-                        <div className='res-city'>{items.city}, </div>
-
-                        <div className='res-country'>{items.state} {items.zipcode}</div>
-
-                        <div className='res-number'>{items.phoneNumber}</div>
-
-                        <br />
-                    </div>
+                        <div className='res-city'>{items.city}, {items.state} {items.zipcode}</div>
+                        <div className='res-number'>{items.phoneNumber.replace(re, subst)}</div>
+                      </div>
 
         })}
     </div>

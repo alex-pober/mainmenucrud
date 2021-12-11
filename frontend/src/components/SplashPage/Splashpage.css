@@ -41,7 +41,6 @@ a{
 }
 
 img {
-    max-width: 80%;
-    height: auto;
-    width: auto\9; /* ie8 */
+    max-width: 60vw;
+    aspect-ratio: auto 576 / 800;
 }

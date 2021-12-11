@@ -1,8 +1,9 @@
 .logo{
-    width: 40%;
+    width: 20vw;
 }
 
-.menu{
+/* .menu{
+    white-space: nowrap;
     border:1px solid orange;
     padding: 12px;
     border-radius: 10px;
@@ -12,11 +13,29 @@
     color: white;
     background: orange;
 
+} */
+
+.menu {
+    text-align:center;
+    white-space: nowrap;
+padding:0.35em 1.2em;
+border: 0.1em solid orange;
+margin: 0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+color: orange;
+transition: all 0.2s;
 }
+.menu:hover{
+    color:white;
+    background-color:orange;
+    }
 
 .profileButton{
     border: none;
-    width: 25px;
+    width: 40px;
+    padding: auto;
 }
 
 .profile-dropdown > ul{
@@ -26,4 +45,5 @@
 ul {
     display: flex;
     justify-content: space-around;
+
 }
